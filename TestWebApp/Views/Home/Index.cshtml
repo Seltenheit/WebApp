@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+@*@model List<Catalog>
+<h2>Catalogs</h2>
+<ul>
+    @foreach (var catalog in Model.Where(c => c.ParentFolder == null))
+    {
+        <li>@catalog.Name</li>
+        <ul>
+            @foreach (var subCatalog in Model.Where(c => c.ParentID == catalog.Id))
+            {
+                <li><a href="@Url.Action("Index", "Catalog", new { id = subCatalog.Id })">@subCatalog.Name</a></li>
+            }
+        </ul>
+    }
+</ul>*@
